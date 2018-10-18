@@ -37,7 +37,7 @@ let person = {
 
 ### Code Blocks (Accessing Values From Object)
 
-BLOCK 01 (DOT NOTATION)
+BLOCK 01 (DOT NOTATION - ACCESSING)
 
 ```javascript
 person.name;
@@ -46,11 +46,11 @@ person.githubAccount.username;
 person.greeting();
 ```
 
-BLOCK 02 (SQUARE BRACKETS NOTATION)
+BLOCK 02 (DOT NOTATION - MODIFYING)
 
 ```javascript
-person["name"];
-person["interests"][0];
-person["githubAccount"]["username"];
-person["greeting"]();
+person.name = "Mshary";
+person.interests.push("Intense Introspection");
+person.githubAccount.username = "DarkWight";
+person.greeting();
 ```
