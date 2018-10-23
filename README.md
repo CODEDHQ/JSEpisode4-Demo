@@ -1,12 +1,36 @@
 # JSEpisodeFour-Demo
 
-[Slides]()
+[Slides](https://docs.google.com/presentation/d/1dkovfExxp06AMyyvZ2Vr5i4H6CuDikzGNVZrzUMsOwk)
 
 ---
 
 ### Code Blocks (Objects)
 
+BLOCK 00 (INTUITION)
+
+How do we know that the following variable belong together - that they belong to the same "thing"?
+
+```javascript
+let name = "Asis";
+let age = 32;
+let interests = ["coding", "cooking", "knitting"];
+```
+
+We could "collect" them in an array:
+
+```javascript
+let person = ["Asis", 32, ["coding", "cooking", "knitting"]];
+
+person[0]; // name
+person[1]; // age
+person[2]; // interests
+```
+
+But accessing this information with an index doesn't tell you what it is that you're accessing.
+
 BLOCK 01 (OBJECT STRUCTURE)
+
+These pairs are known as properties
 
 ```javascript
 let object = {
@@ -20,11 +44,11 @@ BLOCK 02 (OBJECT EXAMPLE)
 
 ```javascript
 let person = {
-  name: "Hamsa",
-  age: 45,
-  interests: ["coding", "writing code", "reading documentation"],
+  name: "Asis",
+  age: 32,
+  interests: ["coding", "cooking", "knitting"],
   githubAccount: {
-    username: "DarthHamza",
+    username: "Octowl",
     numberOfRepos: 1000000
   },
   greeting: function() {
@@ -49,8 +73,21 @@ person.greeting();
 BLOCK 02 (DOT NOTATION - MODIFYING)
 
 ```javascript
-person.name = "Mshary";
-person.interests.push("Intense Introspection");
-person.githubAccount.username = "DarkWight";
-person.greeting();
+person.name = "Hamsa";
+person.interests = ["coding"];
+person.interests.push("being mean to noobs");
+person.githubAccount.username = "DarthHamza";
+person.githubAccount.numberOfRepos = 10;
+// OR
+person.githubAccount = {
+  username: "DarthHamza",
+  numberOfRepos: 10
+};
+
+person.greeting = function() {
+  console.log("Yo!!");
+};
+
+// Adding completely new properties
+person.speakingVolume = 11;
 ```
