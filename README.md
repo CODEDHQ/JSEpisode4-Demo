@@ -4,6 +4,8 @@
 
 ---
 
+All demos should be done in `script.js` file of an [`HTML` repl](https://repl.it/languages/html)
+
 ### Code Blocks (Objects)
 
 BLOCK 00 (INTUITION)
@@ -51,9 +53,7 @@ let person = {
     username: "Octowl",
     numberOfRepos: 1000000
   },
-  greeting: function() {
-    console.log("Hello!");
-  }
+  greeting: () => console.log("Hello!");
 };
 ```
 
@@ -84,9 +84,7 @@ person.githubAccount = {
   numberOfRepos: 10
 };
 
-person.greeting = function() {
-  console.log("Yo!!");
-};
+person.greeting = () => console.log("Yo!!");
 
 // Adding completely new properties
 person.speakingVolume = 11;
