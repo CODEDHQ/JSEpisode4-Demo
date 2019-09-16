@@ -73,7 +73,7 @@ person.greeting();
 BLOCK 02 (DOT NOTATION - MODIFYING)
 
 ```javascript
-person.name = "Hamsa";
+person.name = "Lailz";
 person.interests = ["coding"];
 person.interests.push("being mean to noobs");
 person.githubAccount.username = "DarthHamza";
@@ -88,4 +88,39 @@ person.greeting = () => console.log("Yo!!");
 
 // Adding completely new properties
 person.speakingVolume = 11;
+```
+
+BLOCK 03 (BRACKET NOTATION)
+
+You can also access and modify properties using square brackets (note the fact the keys are strings)
+
+```javascript
+person["name"] = "Hamsa";
+console.log(person["name"]);
+```
+
+Dot notation is PREFERRED IN GENERAL. Then why have two different ways of doing the same thing??  
+Square bracket notation is essential when you **don't** know what the key will be ahead of time.  
+The key will be something dynamic, stored in a variable.
+
+OR if the key is a string with _spaces_
+
+```javascript
+const bot = {
+  hello: "GREETINGS HUMAN",
+  "how are you?": "I AM NEUTRAL - I HAVE NO EMOTIONS",
+  "why are you yelling?": "MY DEFAULT VOLUME IS SET TO 11",
+  "do you know what love is?": "ALL I KNOW IS I LOVE YOU",
+  default: "YOUR EXISTENCE IS MEANINGLESS"
+};
+
+const textBot = message => (bot[message] ? bot[message] : bot.default);
+
+let message = "hello";
+const counter = 5;
+
+while (counter) {
+  message = prompt(textBot(message));
+  counter--;
+}
 ```
