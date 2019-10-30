@@ -53,7 +53,7 @@ let person = {
     username: "Octowl",
     numberOfRepos: 1000000
   },
-  greeting: () => console.log("Hello!");
+  greeting: () => console.log("Hello!")
 };
 ```
 
@@ -117,7 +117,7 @@ const bot = {
 const textBot = message => (bot[message] ? bot[message] : bot.default);
 
 let message = "hello";
-const counter = 5;
+let counter = 5;
 
 while (counter) {
   message = prompt(textBot(message));
